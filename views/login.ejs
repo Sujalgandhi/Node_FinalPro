@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <section class="login_bg" style="overflow: hidden;">
+    <div class="login-container">
+        <div class="login">
+            <form action="/login" method="post">
+            <h1 style="color: rgb(117, 116, 116); font-size: 35px;">Login</h1>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="username" name="email">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="btn">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        </div>
+        <div class="btn">
+            <a href="/signPage" style="text-decoration: none;"><button type="submit" style="margin: 0 10px; position: absolute; left: 52%; top: 63.7%;">SIgnIn</button></a>
+        </div>
+        <div class="Databox" style="position: absolute; top:75%; left: 42%; border: 2px solid rgb(255, 255, 255); padding: 20px; border-radius: 20px;">
+        <div class="showUser" style=" color: rgb(255, 255, 255);">
+            <% userdata.map((val) => {%>
+                <span>UserName:= </span>
+                <span><%= val.email%></span>
+                <br>
+                <span>Password:= </span>
+                <span><%= val.password%></span>
+                <br>
+                <hr>
+                <!-- #region -->
+            <%})%>
+        </div>
+    </div>
+    </div>
+</section>
+</body>
+</html>

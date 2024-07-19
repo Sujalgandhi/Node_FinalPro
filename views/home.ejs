@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/formPage">Add Blog</a></li>
+          <li><a href="/logOut">LogOut</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-flex">
+        <div class="blog-post flex">
+          <% show.map((val) => { %>
+          <div class="img" style="width: 50%; margin: 0 4px">
+            <img src="<%= val.image %>" alt="Blog Post Image" />
+          </div>
+          <div class="content" style="width: 50%; margin: 0 15px">
+            <h1><%= val.title %></h1>
+            <!-- <h2><%= val.author %></h2> -->
+            <p class="post-date"><%= val.date %></p>
+            <p>
+              <%= val.dsc %>
+            </p>
+            <a href="/delete?id=<%= val._id %>"><button>Delete</button></a>
+            <a href="/editPage?id=<%= val._id %>"><button>Edit</button></a>
+          </div>
+          <%})%>
+        </div>
+      </div>
+    </main>
+    <!-- <footer>
+      <p>&copy; 2024 My Blog. All rights reserved.</p>
+    </footer> -->
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignIn</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <section class="login_bg" style="overflow: hidden">
+      <div class="login-container">
+        <div class="login">
+          <form action="/sign" method="post">
+            <h1 style="color: rgb(255, 255, 255); font-size: 35px">Sign In</h1>
+            <div>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+            <div>
+              <label for="email">email:</label>
+              <input type="email" id="username" name="email" required />
+            </div>
+            <div>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="btn">
+              <button type="submit">Sign In</button>
+            </div>
+          </form>
+        </div>
+        <div class="btn">
+          <a href="/loginPage" style="text-decoration: none"
+            ><button
+              type="submit"
+              style="margin: 0 10px; position: absolute; left: 52%; top: 68.5%"
+            >
+              Login
+            </button></a
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
